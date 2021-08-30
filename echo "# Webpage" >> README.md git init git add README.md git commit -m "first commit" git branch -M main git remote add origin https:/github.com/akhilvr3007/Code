@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+  <style>
+  @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+:root {
+  --gray200: #26273b;
+  --gray400: #454560;
+  --gray600: #6f708b;
+  --gray600-accent: #6f70b8;
+  --gray700: hsl(237, 14%, 72%);
+  --gray800: hsl(240, 15%, 86%);
+  --gray900: #f0f0f5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Crimson Text", serif;
+  background: linear-gradient(45deg, var(--gray900), var(--gray800));
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 15rem;
+  height: 70%;
+  min-width: 4rem;
+  background: #ffffff70;
+  transition: flex 300ms ease;
+  position: relative;
+}
+
+.navigation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 4rem;
+  height: 100%;
+  background-color: #ffffff70;
+  border-right: 1px solid var(--gray800);
+}
+
+.nav_icon i {
+  font-size: 1.6rem;
+  transform: translate(-50%);
+  margin-inline: min(2rem, 50%);
+  margin-top: 1rem;
+  cursor: pointer;
+  position: relative;
+  color: #0000;
+  -webkit-text-stroke: 1px var(--gray200);
+}
+
+.nav_icon::after {
+  content: "";
+  padding-top: 0.5rem;
+  display: flex;
+  top: 3rem;
+  margin: auto;
+  justify-content: center;
+  width: calc(100% - 1rem);
+  border-bottom: 1px solid var(--gray700);
+}
+
+.active {
+  flex: 0 4rem;
+}
+
+.nav_list {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.list-item {
+  padding: 0.55rem;
+  transition: background 270ms ease;
+  position: relative;
+  height: 100%;
+}
+
+.list-item:hover {
+  background: hsl(240, 15%, 90%)
+    linear-gradient(to right, var(--gray600-accent) 3px, 3px, #0000);
+}
+
+.active [data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  display: inline-flex;
+  left: 4.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 5.5rem;
+  margin-top: -0.25em;
+  border-radius: 0.5em;
+  padding: 0.75em 1em;
+  background-color: #ffffff40;
+  box-shadow: 0 10px 18px -7px #0002;
+  opacity: 0;
+  transform-origin: left;
+  pointer-events: none;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--gray600);
+}
+
+.active [data-tooltip]:hover::before {
+  animation: showTooltip 200ms linear 100ms forwards;
+}
+
+@keyframes showTooltip {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.list-item i {
+  margin-left: 0.5rem;
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+  background-color: coral;
+  /* width: 32px; */
+  color: var(--gray600-accent);
+  font-size: 1.4rem;
+}
+
+
+
+
+a {
+  overflow: hidden;
+  gap: 1.8rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--gray200);
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+}
+
+  </style>
+<div class="container-fluid">
+<div class="row" style="    margin: 0;
+    margin-bottom: 445px;
+">
+<div class="col-md-4">
+  <nav class="navigation">
+  
+  
+  <div class="nav_icon">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul class="nav_list">
+
+    <li class="list-item list-test" data-tooltip="Codepen">
+      <a href="#">
+        <i class="fab fa-codepen fa-2x"></i>
+        <span class="text">STUDENTS</span>
+      </a>
+    </li>
+
+    <li class="list-item" data-tooltip="Opera">
+      <a href="#">
+        <i class="fab fa-opera fa-2x"></i>
+        <span class="text">LESSON PLAN</span>
+      </a>
+    </li>
+
+   
+    <li class="list-item" data-tooltip="Settings">
+      <a href="#">
+        <i class="fas fa-cog fa-2x"></i>
+        <span class="text">SETTINGS</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+    
+	</div>
+<div class="col-md-8">
+	<form>
+	
+	<H3> VIDEOS </H3>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Insert Url Here</label>
+    <input type="email" class="form-control">
+  
+  </div>
+<H5> OR </H5>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Upload </label>
+    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+</form>
+
+    <!-- Optional JavaScript -->
+	</div>
+	</div>
+	</div>
+	
+	<script>
+const sidebar = document.querySelector(".navigation");
+const navIcon = document.querySelector(".fas");
+
+navIcon.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+</script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
